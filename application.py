@@ -1,4 +1,5 @@
-from flask import Flask, url_for
+import json
+from flask import Flask, url_for, send_from_directory
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,8 +16,8 @@ def api_article(articleid):
 
 
 @app.route('/api/v1/predict')
-def api_v1_predict(articleid):
-    return 'You are reading ' + articleid
+def api_v1_predict():
+    return  send_from_directory('data','example_response_data.json')
 
 if __name__ == '__main__':
     app.run()
