@@ -1,0 +1,36 @@
+name: minjak-env
+channels: !!python/tuple
+- defaults
+dependencies:
+- click=6.7=py36_0
+- flask=0.12=py36_0
+- itsdangerous=0.24=py36_0
+- jinja2=2.9.4=py36_0
+- markupsafe=0.23=py36_2
+- mkl=2017.0.1=0
+- numpy=1.11.3=py36_0
+- openssl=1.0.2j=0
+- pip=9.0.1=py36_1
+- python=3.6.0=0
+- readline=6.2=2
+- requests=2.12.4=py36_0
+- setuptools=27.2.0=py36_0
+- sqlite=3.13.0=0
+- tk=8.5.18=0
+- werkzeug=0.11.15=py36_0
+- wheel=0.29.0=py36_0
+- xz=5.2.2=1
+- zlib=1.2.8=3
+- pip:
+  - aniso8601==1.2.0
+  - flask-restful==0.3.5
+  - nltk==3.2.2
+  - oauthlib==2.0.1
+  - pymongo==3.4.0
+  - python-dateutil==2.6.0
+  - pytz==2016.10
+  - requests-oauthlib==0.7.0
+  - six==1.10.0
+  - tweepy==3.5.0
+prefix: /opt/anaconda3/envs/minjak-env
+
