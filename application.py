@@ -20,4 +20,4 @@ def api_v1_predict():
     return  send_from_directory('data','example_response_data.json')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
