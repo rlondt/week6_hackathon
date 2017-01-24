@@ -1,5 +1,6 @@
 import json
 from sklearn.externals import joblib
+import pandas as pd
 
 from flask import Flask, url_for, send_from_directory, request
 app = Flask(__name__)
