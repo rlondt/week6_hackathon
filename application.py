@@ -15,7 +15,7 @@ def api_article(articleid):
 
 
 @app.route('/api/v1/predict')
-def api_article(articleid):
+def api_v1_predict(articleid):
     return 'You are reading ' + articleid
 
 if __name__ == '__main__':
