@@ -14,7 +14,7 @@ def api_article(articleid):
     return 'You are reading ' + articleid
 
 
-@app.route('api/v1/predict')
+@app.route('/api/v1/predict')
 def api_article(articleid):
     return 'You are reading ' + articleid
 
