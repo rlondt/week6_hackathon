@@ -23,6 +23,7 @@ def api_v1_predict():
     query_df = pd.DataFrame()
     multi_dict = request.args
     for key in multi_dict:
+        print(key)
         # multi_dict.get(key)
         # multi_dict.getlist(key)
         # query_df[key] = query_df.index
