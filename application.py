@@ -42,7 +42,7 @@ def api_v1_predict():
     # query_df.loc[0, 'sale_duration'] = 16.0
     # print(query_df.dtypes)
     # # print(prediction.item(0))
-    print(query_df.collumns)
+    print(query_df.columns)
     p = clf.predict_proba(query_df[colls])[0, 1]
     l = float(p > 0.5)
     print(p)
