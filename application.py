@@ -19,6 +19,7 @@ def api_article(articleid):
 
 @app.route('/api/v1/predict')
 def api_v1_predict():
+    colls = ['delivery_method', 'body_length', 'sale_duration']
     query_df = pd.DataFrame()
     multi_dict = request.args
     for key in multi_dict:
@@ -29,14 +30,19 @@ def api_v1_predict():
             query_df.loc[0, key] = float(multi_dict.get(key))
 
     # print(query_df.dtypes)
-    # prediction = clf.predict(query_df)
+    # p = clf.predict_proba(query_df[colls])[0, 1]
+    # l = float(p > 0.5)
+    # print(p)
+
+    # print("~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    # # prediction = clf.predict(query_df)
     # query_df = pd.DataFrame()
     # query_df.loc[0, 'delivery_method'] = 1.0
     # query_df.loc[0, 'body_length'] = 2113
     # query_df.loc[0, 'sale_duration'] = 16.0
     # print(query_df.dtypes)
-    # print(prediction.item(0))
-    p = clf.predict_proba(query_df)[0, 1]
+    # # print(prediction.item(0))
+    p = clf.predict_proba(query_df[colls])[0, 1]
     l = float(p > 0.5)
     print(p)
     return jsonify({"sample_uuid":  multi_dict.get("sample_uuid"), "probability": p, "label": l})
