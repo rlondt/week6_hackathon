@@ -91,6 +91,8 @@ def api_v1_predict():
     # print(query_df.dtypes)
     # # print(prediction.item(0))
     print(query_df.columns)
+    for coll in float_cols:
+        query_df[coll] = query_df[coll].fillna(0.0)
     p = clf.predict_proba(query_df[float_cols])[0, 1]
     l = float(p > 0.5)
     print(p)
