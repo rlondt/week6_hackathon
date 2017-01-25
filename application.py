@@ -22,6 +22,7 @@ def api_v1_predict():
     colls = ['delivery_method', 'body_length', 'sale_duration']
     query_df = pd.DataFrame()
     multi_dict = request.args
+    print(multi_dict)
     for key in multi_dict:
         print(key)
         # multi_dict.get(key)
